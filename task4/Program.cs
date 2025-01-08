@@ -1,12 +1,21 @@
-﻿double a=Convert.ToDouble(Console.ReadLine());
-if(a<100)
+﻿int[] arr;
+int n = Convert.ToInt32(Console.ReadLine());
+arr = new int[n];
+for (int i = 0; i < n; i++)
 {
-    Console.WriteLine((a*5/100)+a);
+    arr[i] = Convert.ToInt32(Console.ReadLine());
 }
-else if (a>=100 && a<200)
-{
-    Console.WriteLine((a*7/100)+a);
-}
-else {
-   Console.WriteLine((a/10)+a);
-}
+int cnt=0;
+for(int i=0;i<n;i++)
+    {
+      cnt=0;
+       for(int j=0;j<n;j++)
+    {
+       if (arr[i]==arr[j])
+       {cnt++;}
+    }
+        if (cnt==1)
+        {
+        Console.WriteLine(arr[i]);
+        }
+    }
